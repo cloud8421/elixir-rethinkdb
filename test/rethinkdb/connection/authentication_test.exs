@@ -1,7 +1,6 @@
 defmodule Rethinkdb.Connection.Authentication.Test do
   use Rethinkdb.Case, async: false
   alias Rethinkdb.Connection.Socket
-  alias Rethinkdb.Connection.Options
   alias Rethinkdb.Connection.Authentication
 
   test "send authetication to rethinkdb" do
