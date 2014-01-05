@@ -4,7 +4,7 @@ defmodule Rethinkdb.Mixfile do
   def project do
     [ app: :'rethinkdb',
       version: "0.2.2",
-      elixir: "~> 0.10.2",
+      elixir: "~> 0.12.1",
       deps: deps(Mix.env) ]
   end
 
@@ -26,13 +26,13 @@ defmodule Rethinkdb.Mixfile do
   # Returns the list of dependencies in the format:
   def deps(:prod) do
     [
-      { :protobuf, github: "azukiapp/elixir-protobuf", tag: "v0.0.3" },
+      { :protobuf, github: "cloud8421/elixir-protobuf" },
     ]
   end
 
   def deps(:test) do
     deps(:prod) ++ [
-      {:meck, github: "eproxus/meck", tag: "0.8.1", override: true},
+      {:meck, "0.7.2", github: "eproxus/meck", tag: "0.7.2"},
       {:mock, github: "jjh42/mock"}
     ]
   end
